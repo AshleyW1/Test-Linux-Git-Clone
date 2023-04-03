@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Server Status</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="serverstatus.html">Server Status</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript">
+	var ip = location.host;
+	console.log("Server IP: " + ip);
+	console.log("Server Status: Running");
+
+	<?php
+	$uptime = shell_exec("/usr/bin/uptime");
+	echo "Uptime is: $uptime";
+	?>
+</script>
+
+</body>
+</html>
